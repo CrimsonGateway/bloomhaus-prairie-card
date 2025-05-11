@@ -78,9 +78,6 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			rotate: {
-				'65': '65deg',
-			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -147,16 +144,6 @@ export default {
 					'100%': {
 						opacity: '1'
 					}
-				},
-				'sparkle': {
-					'0%, 100%': {
-						transform: 'scale(1)',
-						opacity: '1'
-					},
-					'50%': {
-						transform: 'scale(1.2)',
-						opacity: '0.7'
-					}
 				}
 			},
 			animation: {
@@ -166,8 +153,7 @@ export default {
 				'bloom': 'bloom 0.5s ease-out forwards',
 				'flutter': 'flutter 4s ease-in-out infinite',
 				'grow': 'grow 2s ease-out forwards',
-				'fade-in': 'fade-in 1s ease-out forwards',
-				'sparkle': 'sparkle 2s ease-in-out infinite'
+				'fade-in': 'fade-in 1s ease-out forwards'
 			},
 			backgroundImage: {
 				'farm-pattern': "url('/farm-background.png')"

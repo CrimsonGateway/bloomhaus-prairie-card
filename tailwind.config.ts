@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,12 +62,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom pastel colors
+				pastel: {
+					green: '#C1E1C1',
+					pink: '#FFCCD5',
+					yellow: '#FEF7CD',
+					blue: '#D3E4FD',
+					purple: '#E5DEFF',
+					peach: '#FDE1D3',
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			rotate: {
+				'65': '65deg',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +97,80 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'bloom': {
+					'0%': {
+						transform: 'scale(0.8)',
+						opacity: '0.5'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'flutter': {
+					'0%, 100%': {
+						transform: 'translateX(0) translateY(0) rotate(0deg)'
+					},
+					'25%': {
+						transform: 'translateX(5px) translateY(-5px) rotate(5deg)'
+					},
+					'50%': {
+						transform: 'translateX(0) translateY(-10px) rotate(0deg)'
+					},
+					'75%': {
+						transform: 'translateX(-5px) translateY(-5px) rotate(-5deg)'
+					}
+				},
+				'grow': {
+					'0%': {
+						height: '0',
+						opacity: '0'
+					},
+					'100%': {
+						height: '150px',
+						opacity: '1'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
+				},
+				'sparkle': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': {
+						transform: 'scale(1.2)',
+						opacity: '0.7'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'bloom': 'bloom 0.5s ease-out forwards',
+				'flutter': 'flutter 4s ease-in-out infinite',
+				'grow': 'grow 2s ease-out forwards',
+				'fade-in': 'fade-in 1s ease-out forwards',
+				'sparkle': 'sparkle 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'farm-pattern': "url('/farm-background.png')"
 			}
 		}
 	},
